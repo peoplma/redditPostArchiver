@@ -65,7 +65,7 @@ Customization Configuration
 
 """
 # Path to which to output the file #
-outputFilePath='./'
+outputFilePath1='./'
 # The Path to the stylesheet, relative to where the html file will be stored #
 pathToCSS='css/style.css'
 """
@@ -266,7 +266,7 @@ def main(startStamp,endStamp,step,folderName,subName,progress):
             #print post_json
             #print("I saved the post and named it " + str(post.name) + " .---")
             try:
-                outputFilePath = outputFilePath + postID + '.html'
+                outputFilePath = outputFilePath1 + postID + '.html'
                 thePost = post
                 htmlFile = open(outputFilePath,'w')
                 parsePost(thePost)
