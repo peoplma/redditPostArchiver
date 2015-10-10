@@ -64,8 +64,7 @@ if not os.path.exists(folderName):
 Customization Configuration
 
 """
-# Path to which to output the file #
-outputFilePath1='./'
+
 # The Path to the stylesheet, relative to where the html file will be stored #
 pathToCSS='css/style.css'
 """
@@ -266,6 +265,8 @@ def main(startStamp,endStamp,step,folderName,subName,progress):
             #print post_json
             #print("I saved the post and named it " + str(post.name) + " .---")
             try:
+            	# Path to which to output the file #
+            	outputFilePath1='./'
                 outputFilePath = outputFilePath1 + postID + '.html'
                 thePost = r.get_submission(submission_id=postID)
                 htmlFile = open(outputFilePath,'w')
