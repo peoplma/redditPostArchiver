@@ -72,7 +72,7 @@ pathToCSS='css/style.css'
 Reddit Post Archiver
 By Samuel Johnson Stoever
 """
-outputFilePath = outputFilePath + postID + '.html'
+
 monthsList = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 
@@ -264,6 +264,7 @@ def main(startStamp,endStamp,step,folderName,subName,progress):
             #print post_json
             #print("I saved the post and named it " + str(post.name) + " .---")
             try:
+                outputFilePath = outputFilePath + postID + '.html'
                 thePost = post
                 htmlFile = open(outputFilePath,'w')
                 parsePost(thePost)
