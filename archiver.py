@@ -213,6 +213,7 @@ def getNew(subName,folderName):
         #print post_json
     for post in subreddit_posts:
         print post
+        postID= (post.id)
         url1= post.permalink
         #pprint(vars(post))
         data= {'user-agent':'archive by /u/healdb'}
