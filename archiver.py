@@ -192,7 +192,7 @@ def fixMarkdown(markdown):
 def fixUnicode(text):
     return str(text.encode('utf8'))
 # End Function Definitions
-r = praw.Reddit(user_agent='RedditPostArchiver Bot, version 0.93')
+# r = praw.Reddit(user_agent='RedditPostArchiver Bot, version 0.93')
 # Disclaimer, storing plain text passwords is bad.
 # uncomment the following line to login (e.g., in case of Unable to Archive Post:
 # r.login('username', 'password')
@@ -267,7 +267,7 @@ def main(startStamp,endStamp,step,folderName,subName,progress):
             #print("I saved the post and named it " + str(post.name) + " .---")
             try:
                 outputFilePath = outputFilePath1 + postID + '.html'
-                thePost = post
+                thePost = r.get_submission(submission_id=postID)
                 htmlFile = open(outputFilePath,'w')
                 parsePost(thePost)
                 htmlFile.close()
