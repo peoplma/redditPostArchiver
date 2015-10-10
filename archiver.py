@@ -268,7 +268,7 @@ def main(startStamp,endStamp,step,folderName,subName,progress):
             	# Path to which to output the file #
             	outputFilePath1='./'
                 outputFilePath = outputFilePath1 + postID + '.html'
-                thePost = r.get_submission(submission_id=postID)
+                thePost = post
                 htmlFile = open(outputFilePath,'w')
                 parsePost(thePost)
                 htmlFile.close()
@@ -283,6 +283,7 @@ def main(startStamp,endStamp,step,folderName,subName,progress):
 progress = endStamp-startStamp
 while True:
     try:
+    	htmlFile = open(outputFilePath,'w')
         main(startStamp,endStamp,step,folderName,subName,progress)
         print("Succesfully got all posts within parameters.")
         choice=input('You can now either\n1. Exit\n2. Get new posts\n(Input the number)\n')
