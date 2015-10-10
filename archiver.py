@@ -253,6 +253,7 @@ def main(startStamp,endStamp,step,folderName,subName,progress):
         for post in search_results:
             #print("---I found a post! It\'s called:" + str(post))
             url= (post.permalink).replace('?ref=search_posts','')
+            postID= (post.id)
             #pprint(vars(post))
             data= {'user-agent':'archive by /u/healdb'}
             #manually grabbing this file is much faster than loading the individual json files of every single comment, as this json provides all of it
