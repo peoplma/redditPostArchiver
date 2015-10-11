@@ -283,6 +283,8 @@ def main(startStamp,endStamp,step,folderName,subName,progress):
 progress = endStamp-startStamp
 while True:
     try:
+    	outputFilePath1='./'
+    	outputFilePath = outputFilePath1 + postID + '.html'
     	htmlFile = open(outputFilePath,'w')
         main(startStamp,endStamp,step,folderName,subName,progress)
         print("Succesfully got all posts within parameters.")
